@@ -5,5 +5,13 @@ exports[`App Snapshot is equal to previous snapshot 1`] = `
   className="main-app"
 >
   Hello
+  <br />
+  <button
+    className="button "
+    onClick={[Function]}
+    type="button"
+  >
+    Hello button
+  </button>
 </div>
 `;
