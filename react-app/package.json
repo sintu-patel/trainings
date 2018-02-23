@@ -7,7 +7,8 @@
     "start": "webpack-dev-server --hot",
     "test": "jest --bail --verbose",
     "test:watch": "jest --bail --watch --verbose",
-    "test:updatesnap": "jest --updateSnapshot"
+    "test:updatesnap": "jest --updateSnapshot",
+    "coverage": "jest --coverage"
   },
   "keywords": [
     "react"
@@ -28,10 +29,26 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.1",
     "babel-loader": "^7.1.2",
+    "jest-cli": "^22.4.2",
+    "react-addons-test-utils": "^15.6.2",
     "webpack": "^2.7.0"
   },
+  "babel": {
+        "presets": [
+            "es2015",
+            "react"
+        ]
+  },
   "jest": {
+    "transform": {".*": "./node_modules/babel-jest"},
+    "unmockedModulePathPatterns": [
+        "./node_modules/react",
+        "./node_modules/react-dom",
+        "./node_modules/react-addons-test-utils",
+        "./node_modules/fbjs"
+    ],
     "coverageDirectory": "./public",
     "testRegex": "\\.?(test|spec)\\.jsx?$",
     "coverageReporters": [
@@ -54,7 +71,6 @@
     "testPathIgnorePatterns": [
       "/webpack/",
       "/node_modules/",
-      "/server/",
       "/coverage/"
     ]
   }
