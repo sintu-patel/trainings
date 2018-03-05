@@ -4,23 +4,23 @@ class Button extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			buttonClass: ''
+			text: 'Button'
 		};
 		this.handleClick = this.handleClick.bind(this);
 	}
 	handleClick() {
 		this.setState({
-			buttonClass: 'active'
+			text: 'Button updated'
 		});
 	}
 	render() {
 		return (
 			<button
 				type="button"
-				className={`button ${this.state.buttonClass}` }
+				className="button"
 				onClick={this.handleClick }
 			>
-				{this.props.text}
+				{this.state.text}
 			</button>
 		);
 	}

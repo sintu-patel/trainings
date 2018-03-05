@@ -5,32 +5,28 @@ import Button from './Button.jsx';
 
 describe('Button', () => {
 
-	const data = {
-		text: 'button text'
-	};
-
 	test('Snapshot is equal to previous snapshot', () => {
         const tree = renderer
-            .create(<Button {...data} />)
+            .create(<Button />)
             .toJSON();
         expect(tree).toMatchSnapshot();
     });
     
-    const wrapper = mount(<Button {...data} />);
+    const wrapper = mount(<Button />);
     test('Button Renders', () => {
         expect(wrapper.find('.button').length).toBe(1);
     });
 
     test('Button Text is same as in props', () => {
-        expect(wrapper.find('.button').text()).toBe('button text');
+        expect(wrapper.find('.button').text()).toBe('Button');
     });
 
-    test('Button does not have class active on load', () => {
-        expect(wrapper.find('.button').hasClass('active')).toBeFalsy();
+    test('Button have text "Button" on load', () => {
+        expect(wrapper.find('.button').text()).toBe("Button");
     });
 
-    test('Button does have class active if click on Button', () => {
+    test('Button have text "Button updated" on click', () => {
     	wrapper.find('.button').simulate('click');
-        expect(wrapper.find('.button').hasClass('active')).toBeTruthy();
+        expect(wrapper.find('.button').text()).toBe("Button updated");
     });
 });
