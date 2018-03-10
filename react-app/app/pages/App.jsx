@@ -1,5 +1,6 @@
 import React from 'react';
-import Button from './app/components/button/Button.jsx'
+import { Link } from 'react-router-dom';
+import Button from '../components/button/Button.jsx'
 
 class App extends React.Component {
 	render() {
@@ -8,6 +9,7 @@ class App extends React.Component {
 				Hello
 				<br />
 				<Button text='Hello button' />
+				<Link to="/test">Test</Link>
 			</div>
 		);
 	}

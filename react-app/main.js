@@ -1,5 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App.jsx';
+import { render } from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+import App from '../react-app/app/pages/App.jsx';
+import SimpleGrid from '../react-app/app/pages/simple-grid/SimpleGrid.jsx';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+render((
+  <BrowserRouter>
+  	<div>
+    	<Route exact path='/' component={App} />
+    	<Route exact path='/test' component={SimpleGrid} />
+    </div>
+  </BrowserRouter>
+), document.getElementById('app'));
