@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './components/button/Button.jsx'
+import Button from './app/components/button/Button.jsx'
 
 class App extends React.Component {
 	render() {

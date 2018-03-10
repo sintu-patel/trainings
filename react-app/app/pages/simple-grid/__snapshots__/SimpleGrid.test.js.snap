@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimpleGrid Snapshot is equal to previous snapshot 1`] = `
+<div
+  className="simple-grid"
+>
+  <div
+    className="header"
+  >
+    Header
+  </div>
+  <div
+    className="content"
+  >
+    Content
+  </div>
+  <div
+    className="footer"
+  >
+    Footer
+  </div>
+</div>
+`;
