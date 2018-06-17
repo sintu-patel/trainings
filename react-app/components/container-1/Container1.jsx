@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../button-with-context/Button.jsx'
+import Button from '../button/Button.jsx'
 
 class Container1 extends React.Component {
 	render() {
